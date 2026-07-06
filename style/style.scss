@@ -235,17 +235,7 @@ body {
    }
 
    &__feature {
-      aspect-ratio: 370/305.5;
       text-align: center;
-      overflow: hidden;
-
-      @media screen and (max-width: 1024px) {
-         aspect-ratio: 315/237;
-      }
-
-      @media screen and (max-width: 767px) {
-         aspect-ratio: 278/221.5;
-      }
    }
 
    &__icon {
@@ -322,8 +312,6 @@ body {
 
       @media screen and (max-width: 767px) {
          @include font(14px, 16px);
-         max-width: 280px;
-         margin: 0 auto;
       }
    }
 }
