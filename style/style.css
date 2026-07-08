@@ -701,6 +701,21 @@ body {
     height: 39.6px;
   }
 }
+.staff__link-icon {
+  height: 18px;
+  width: -moz-max-content;
+  width: max-content;
+}
+@media screen and (max-width: 1024px) {
+  .staff__link-icon {
+    height: 15.14px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .staff__link-icon {
+    height: 18.28px;
+  }
+}
 .staff__link-icon path {
   transition: fill 0.2s linear;
 }
