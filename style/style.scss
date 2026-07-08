@@ -547,6 +547,11 @@ body {
       @media screen and (max-width: 1024px) {
          margin-bottom: 25px;
       }
+
+      @media screen and (max-width: 767px) {
+         aspect-ratio: 280/227.25;
+         object-fit: cover;
+      }
    }
 
    &__name {
