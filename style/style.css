@@ -586,6 +586,8 @@ body {
   width: 100%;
   margin-bottom: 31px;
   aspect-ratio: 1/1;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 @media screen and (max-width: 1024px) {
   .staff__photo {
@@ -595,8 +597,6 @@ body {
 @media screen and (max-width: 767px) {
   .staff__photo {
     aspect-ratio: 280/227.25;
-    -o-object-fit: cover;
-       object-fit: cover;
   }
 }
 .staff__name {

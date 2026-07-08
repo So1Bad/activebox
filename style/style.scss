@@ -543,6 +543,7 @@ body {
       width: 100%;
       margin-bottom: 31px;
       aspect-ratio: 1/1;
+      object-fit: cover;
 
       @media screen and (max-width: 1024px) {
          margin-bottom: 25px;
@@ -550,7 +551,6 @@ body {
 
       @media screen and (max-width: 767px) {
          aspect-ratio: 280/227.25;
-         object-fit: cover;
       }
    }
 
