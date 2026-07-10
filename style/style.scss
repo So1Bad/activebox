@@ -6,6 +6,7 @@ $feature-title: #2D3033;
 $feature-text: #6C7279;
 $backgroun-works: rgba(255, 67, 67, 0.8);
 $download-text: #000000;
+$footer-bg: #353C65;
 
 @mixin font($size, $line-height, $weight: 400) {
    font-size: $size;
@@ -614,9 +615,9 @@ body {
    &__link {
       width: 39px;
       height: 39px;
+      display: flex;
       align-items: center;
       justify-content: center;
-      display: flex;
       border: 1px solid #C6CBCD;
       position: relative;
       transition: border-color 0.3s linear,
@@ -627,7 +628,7 @@ body {
       }
 
       &:active {
-         transform: scale(0.8);
+         transform: scale(0.9);
       }
 
       @media screen and (max-width: 1024px) {
@@ -641,11 +642,10 @@ body {
       }
 
       &-icon {
-         height: 18px;
-         width: max-content;
 
          @media screen and (max-width: 1024px) {
             height: 15.14px;
+            width: max-content;
          }
 
          @media screen and (max-width: 767px) {
@@ -654,6 +654,16 @@ body {
 
          path {
             transition: fill 0.2s linear;
+         }
+      }
+
+      .icon-twitter {
+         @media screen and (max-width: 1024px) {
+            height: 13.42px;
+         }
+
+         @media screen and (max-width: 767px) {
+            height: 16.21px;
          }
       }
 
@@ -667,5 +677,165 @@ body {
 
    }
 }
+
+.footer {
+   background-color: $footer-bg;
+   padding: 71px 0 0;
+
+   @media screen and (max-width: 1024px) {
+      padding: 46.5px 0 0;
+   }
+
+   @media screen and (max-width: 767px) {
+      padding: 34px 0 0;
+   }
+
+   &__container {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      margin-bottom: 67px;
+      column-gap: 30px;
+
+      @media screen and (max-width: 1024px) {
+         column-gap: 20px;
+         margin-bottom: 41px;
+      }
+
+      @media screen and (max-width: 767px) {
+         grid-template-columns: 1fr;
+         row-gap: 59px;
+         margin-bottom: 33px;
+      }
+   }
+
+   &__item {
+      text-align: center;
+   }
+
+   &__caption {
+      @include font(18px, 21px, 700);
+      color: $text-color;
+      text-transform: uppercase;
+
+      @media screen and (max-width: 1024px) {
+         @include font(14px, 16px, 700);
+      }
+
+   }
+
+   &__info {
+      @include font(18px, 21px);
+      color: $text-color;
+      margin-top: 29px;
+
+      @media screen and (max-width: 1024px) {
+         @include font(14px, 16px);
+         margin-top: 17px;
+      }
+
+      @media screen and (max-width: 767px) {
+         margin-top: 34px;
+      }
+   }
+
+   &__link-wrapper {
+      margin-top: 49px;
+      display: flex;
+      column-gap: 26px;
+      justify-content: center;
+
+      @media screen and (max-width: 1024px) {
+         margin-top: 32.5px;
+         column-gap: 23px;
+      }
+
+      @media screen and (max-width: 767px) {
+         margin-top: 36px;
+      }
+   }
+
+   &__link {
+      width: 39px;
+      height: 39px;
+      border: 1px solid #C6CBCD;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      transition: border-color 0.3s linear,
+         transform 0.2s ease;
+
+      @media screen and (max-width: 1024px) {
+         width: 33px;
+         height: 33px;
+      }
+
+      &:hover {
+         border-color: $backgroun-secondary;
+      }
+
+      &:active {
+         transform: scale(0.9);
+      }
+
+      &:active {
+         .footer__link-icon {
+            path {
+               fill: $backgroun-secondary;
+            }
+         }
+      }
+
+
+      &-icon {
+         @media screen and (max-width: 1024px) {
+            height: 15.23px;
+            width: max-content;
+         }
+
+         path {
+            transition: fill 0.2s linear;
+         }
+      }
+
+      .icon-twitter {
+         @media screen and (max-width: 1024px) {
+            height: 13.51px;
+         }
+      }
+   }
+
+   &__copyright-wrapper {
+      background-color: #2C3154;
+      padding: 24px 20px;
+
+      @media screen and (max-width: 1024px) {
+         padding: 14px 20px;
+      }
+
+      @media screen and (max-width: 767px) {
+         padding: 30px 20px 28px;
+      }
+   }
+
+   &__copyright {
+      @include font(18px, 21px);
+      color: #808080;
+      text-align: center;
+      max-width: 400px;
+      margin: 0 auto;
+
+      @media screen and (max-width: 1024px) {
+         @include font(14px, 16px);
+         max-width: 314px;
+      }
+
+      &-span {
+         color: $text-color;
+      }
+   }
+}
+
+
+
 
 /*font-family: "Raleway", sans-serif;*/
