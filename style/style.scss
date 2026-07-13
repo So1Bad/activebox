@@ -7,6 +7,7 @@ $feature-text: #6C7279;
 $backgroun-works: rgba(255, 67, 67, 0.8);
 $download-text: #000000;
 $footer-bg: #353C65;
+$testimonials-bg: #5C3249;
 
 @mixin font($size, $line-height, $weight: 400) {
    font-size: $size;
@@ -806,14 +807,14 @@ body {
 
    &__copyright-wrapper {
       background-color: #2C3154;
-      padding: 24px 20px;
+      padding: 24px 0;
 
       @media screen and (max-width: 1024px) {
-         padding: 14px 20px;
+         padding: 14px 0;
       }
 
       @media screen and (max-width: 767px) {
-         padding: 30px 20px 28px;
+         padding: 30px 0 28px;
       }
    }
 
@@ -835,7 +836,130 @@ body {
    }
 }
 
+.testimonials {
+   position: relative;
+
+   &::before {
+      content: '';
+      display: block;
+      background-color: $testimonials-bg;
+      opacity: 1;
+      width: 100%;
+      height: calc(100% - 45px);
+      position: absolute;
+      top: 0;
+      left: 0;
+
+      @media screen and (max-width: 1024px) {
+         height: calc(100% - 33.5px);
+      }
+
+      @media screen and (max-width: 767px) {
+         height: calc(100% - 32.5px);
+      }
+   }
+
+
+   .testimonials__item {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      column-gap: 31px;
+      align-items: center;
+
+      @media screen and (max-width: 1024px) {
+         column-gap: 19px;
+      }
+
+      @media screen and (max-width: 767px) {
+         grid-template-columns: 1fr;
+         row-gap: 25px;
+      }
+   }
+
+   &__image {
+      width: 100%;
+      aspect-ratio: 570/490;
+      object-fit: cover;
+
+      @media screen and (max-width: 1024px) {
+         aspect-ratio: 482/332;
+      }
+
+      @media screen and (max-width: 767px) {
+         aspect-ratio: 280/218;
+      }
+   }
+
+   &__title {
+      font-family: "Cardo", serif;
+      color: $text-color;
+      font-style: italic;
+      @include font(36px, 49px, 400);
+      text-transform: capitalize;
+      margin-bottom: 23px;
+
+      @media screen and (max-width: 1024px) {
+         @include font(24px, 32px, 400);
+         margin-bottom: 8px;
+      }
+
+      @media screen and (max-width: 767px) {
+         text-align: center;
+         margin-bottom: 15px;
+      }
+   }
+
+   &__info {
+      @include font(13px, 15px, 700);
+      color: $text-color;
+      text-transform: uppercase;
+
+      @media screen and (max-width: 1024px) {
+         @include font(12px, 14px, 700);
+      }
+
+      @media screen and (max-width: 767px) {
+         text-align: center;
+         margin-bottom: 95px;
+      }
+   }
+
+   .swiper-pagination {
+      position: static;
+      margin-top: 31px;
+      display: flex;
+      column-gap: 25px;
+      justify-content: center;
+
+      @media screen and (max-width: 1024px) {
+         margin-top: 24px;
+      }
+
+      @media screen and (max-width: 767px) {
+         margin-top: 23px;
+      }
+   }
+
+   .swiper-pagination-bullet {
+      width: 14px;
+      height: 14px;
+      margin: 0 !important;
+      background-color: transparent;
+      border: 1px solid #7E5D6F;
+      transition: all .2s linear;
+
+      @media screen and (max-width: 1024px) {
+         width: 9.5px;
+         height: 9.5px;
+      }
+   }
+
+   .swiper-pagination-bullet-active {
+      background-color: #7E5D6F;
+   }
+}
 
 
 
 /*font-family: "Raleway", sans-serif;*/
+/* font-family: "Cardo", serif;*/
